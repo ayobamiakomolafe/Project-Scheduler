@@ -1,14 +1,15 @@
 from crewai import Agent, Task, Crew
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
+import streamlit as st
 
-from dotenv import load_dotenv
-import os
+api_key =  st.secrets["GEMINI"]    
 
-load_dotenv()  # Load environment variables from .env file
+my_llm = ChatGoogleGenerativeAI(
+    model="gemini-2.0-flash",
+    temperature=0,
+    api_key =  api_key
+)
 
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")  # Set the OpenAI API key    
-
-my_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 def build_crew(project_description):
 
