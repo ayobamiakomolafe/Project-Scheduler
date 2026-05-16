@@ -1,5 +1,5 @@
 streamlit
-crewai==1.14.4
+crewai
 pydantic==1.10.13
 
 chromadb==0.4.22
