@@ -1,6 +1,6 @@
 streamlit
 crewai
-pydantic==1.10.13
+pydantic==2.12.3
 
 chromadb==0.4.22
 
