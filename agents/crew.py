@@ -17,14 +17,14 @@ def build_crew(project_description):
         role="Planner",
         goal="Generate structured project tasks",
         backstory="Expert in WBS",
-        llm="gpt-4o-mini"
+        llm=my_llm
     )
 
     estimator = Agent(
         role="Estimator",
         goal="Estimate duration, cost, resources",
         backstory="Expert in project estimation",
-        llm="gpt-4o-mini"
+        llm=my_llm
        
     )
 
@@ -32,7 +32,7 @@ def build_crew(project_description):
         role="Dependency Manager",
         goal="Assign valid dependencies",
         backstory="Expert in project scheduling and dependencies",
-        llm="gpt-4o-mini"
+        llm=my_llm
     )
 
     t1 = Task(
