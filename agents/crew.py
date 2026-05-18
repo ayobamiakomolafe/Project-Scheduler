@@ -1,8 +1,7 @@
 from crewai import Agent, Task, Crew, LLM
 from langchain_google_genai import ChatGoogleGenerativeAI
 import streamlit as st
-
-api_key =  st.secrets["GEMINI"]    
+   
 
 my_llm = LLM(
     model="groq/llama-3.3-70b-versatile", 
