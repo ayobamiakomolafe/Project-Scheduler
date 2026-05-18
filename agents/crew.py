@@ -5,8 +5,8 @@ import streamlit as st
 api_key =  st.secrets["GEMINI"]    
 
 my_llm = LLM(
-    model='gemini/gemini-2.0-flash',
-    api_key=st.secrets["GEMINI"]
+    model="groq/llama-3.3-70b-versatile", 
+    api_key=st.secrets["GROQ_API_KEY"]
 )
 
 
