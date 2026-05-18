@@ -1,13 +1,12 @@
-from crewai import Agent, Task, Crew
+from crewai import Agent, Task, Crew, LLM
 from langchain_google_genai import ChatGoogleGenerativeAI
 import streamlit as st
 
 api_key =  st.secrets["GEMINI"]    
 
-my_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.0-flash",
-    temperature=0,
-    google_api_key =  api_key
+my_llm = LLM(
+    model='gemini/gemini-2.0-flash',
+    api_key=st.secrets["GEMINI"]
 )
 
 
