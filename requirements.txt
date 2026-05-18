@@ -1,2 +1,7 @@
 streamlit
 crewai
+pydantic>=2.7.0
+chromadb>=0.5.0
+crewai
+langchain-google-genai
+streamlit
