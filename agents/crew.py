@@ -4,7 +4,7 @@ import streamlit as st
    
 
 my_llm = LLM(
-     model=model="gemini/gemini-2.5-flash",
+     model ="gemini/gemini-2.5-flash",
     api_key=st.secrets["GEMINI"]
 )
 
