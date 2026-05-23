@@ -58,7 +58,7 @@ def build_crew(project_description):
 
     t3 = Task(
         description="Add valid dependencies (no cycles). Keep JSON format.",
-        expected_output="JSON with tasks, filled duration, cost, resources, dependencies. JSON must be correctly formatted with no added text.resources should be a list of strings (e.g. [string1, string2])",",
+        expected_output="JSON with tasks, filled duration, cost, resources, dependencies. JSON must be correctly formatted with no added text.resources should be a list of strings (e.g. [string1, string2])",
         context=[t2],
         agent=dependency_agent
     )
