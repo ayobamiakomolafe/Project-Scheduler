@@ -13,3 +13,6 @@ langchain-huggingface[full]
 torch 
 torchvision
 langchain_chroma
+langchain_openai
+langchain_text_splitters
+langchain_community
