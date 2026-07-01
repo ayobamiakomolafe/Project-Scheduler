@@ -2,6 +2,8 @@
 
 A modern web application for AI-powered project scheduling with task breakdown, dependency management, and Gantt chart visualization.
 
+Live demo: https://project-scheduler.streamlit.app/
+
 ## Features
 
 ✨ **AI-Powered Task Breakdown** - Uses CrewAI with GPT-4 to intelligently break down projects  
