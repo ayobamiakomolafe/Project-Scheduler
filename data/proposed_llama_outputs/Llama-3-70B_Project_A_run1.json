@@ -1,0 +1,116 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Plan project",
+            "duration": 5,
+            "resources": [
+                "Project Manager"
+            ],
+            "cost": 2500.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Develop secure patient portal",
+            "duration": 30,
+            "resources": [
+                "Senior Dev",
+                "Junior Dev"
+            ],
+            "cost": 30000.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "Implement regulatory compliance",
+            "duration": 15,
+            "resources": [
+                "Compliance Officer"
+            ],
+            "cost": 7500.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "Integrate telemedicine video",
+            "duration": 20,
+            "resources": [
+                "Senior Dev",
+                "Junior Dev"
+            ],
+            "cost": 20000.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Develop scheduling system",
+            "duration": 25,
+            "resources": [
+                "Senior Dev",
+                "Junior Dev"
+            ],
+            "cost": 25000.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "Integrate Stripe payment processing",
+            "duration": 10,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 5000.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T7",
+            "name": "Test and deploy patient portal",
+            "duration": 15,
+            "resources": [
+                "QA Engineer",
+                "DevOps Engineer"
+            ],
+            "cost": 10000.0,
+            "dependencies": [
+                "T4",
+                "T5",
+                "T6"
+            ]
+        },
+        {
+            "id": "T8",
+            "name": "Conduct user acceptance testing",
+            "duration": 5,
+            "resources": [
+                "QA Engineer"
+            ],
+            "cost": 2500.0,
+            "dependencies": [
+                "T7"
+            ]
+        },
+        {
+            "id": "T9",
+            "name": "Launch and maintain patient portal",
+            "duration": 10,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 5000.0,
+            "dependencies": [
+                "T8"
+            ]
+        }
+    ]
+}

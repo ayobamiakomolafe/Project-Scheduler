@@ -1,0 +1,117 @@
+{
+  "tasks":[
+      {
+         "id":"TASK-001",
+         "name":"Project Initiation and Planning",
+         "roles":[
+            "ARCH-PRIN-01",
+            "ARCH-SR-02"
+         ],
+         "duration in working days":5.0,
+         "cost in USD":1375.00,
+         "dependencies":[]
+      },
+      {
+         "id":"TASK-002",
+         "name":"Infrastructure Provisioning and Security Auditing",
+         "roles":[
+            "ARCH-PRIN-01",
+            "OPS-SR-SEC"
+         ],
+         "duration in working days":10.0,
+         "cost in USD":3750.00,
+         "dependencies":[
+            "TASK-001"
+         ]
+      },
+      {
+         "id":"TASK-003",
+         "name":"Database Schema Design and Snowflake Ingestion",
+         "roles":[
+            "ARCH-SR-02",
+            "DATA-LEAD-01"
+         ],
+         "duration in working days":8.0,
+         "cost in USD":2920.00,
+         "dependencies":[
+            "TASK-002"
+         ]
+      },
+      {
+         "id":"TASK-004",
+         "name":"Telemedicine Video Integration and API Development",
+         "roles":[
+            "ENG-SR-BACK",
+            "ENG-MID-BACK"
+         ],
+         "duration in working days":12.0,
+         "cost in USD":5520.00,
+         "dependencies":[
+            "TASK-003"
+         ]
+      },
+      {
+         "id":"TASK-005",
+         "name":"Stripe Payment Processing Integration",
+         "roles":[
+            "ENG-SR-BACK",
+            "ENG-MID-BACK"
+         ],
+         "duration in working days":5.0,
+         "cost in USD":2125.00,
+         "dependencies":[
+            "TASK-004"
+         ]
+      },
+      {
+         "id":"TASK-006",
+         "name":"Scheduling and Patient Portal Development",
+         "roles":[
+            "ENG-SR-MOB",
+            "ENG-MID-FRONT"
+         ],
+         "duration in working days":15.0,
+         "cost in USD":7875.00,
+         "dependencies":[
+            "TASK-005"
+         ]
+      },
+      {
+         "id":"TASK-007",
+         "name":"Automated Testing and Quality Assurance",
+         "roles":[
+            "QA-AUTO-03"
+         ],
+         "duration in working days":8.0,
+         "cost in USD":600.00,
+         "dependencies":[
+            "TASK-006"
+         ]
+      },
+      {
+         "id":"TASK-008",
+         "name":"Deployment and Security Hardening",
+         "roles":[
+            "OPS-SR-SEC"
+         ],
+         "duration in working days":5.0,
+         "cost in USD":625.00,
+         "dependencies":[
+            "TASK-007"
+         ]
+      },
+      {
+         "id":"TASK-009",
+         "name":"Project Completion and Handover",
+         "roles":[
+            "ARCH-PRIN-01",
+            "ARCH-SR-02"
+         ],
+         "duration in working days":2.0,
+         "cost in USD":580.00,
+         "dependencies":[
+            "TASK-008"
+         ]
+      }
+   ]
+}

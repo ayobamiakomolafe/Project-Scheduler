@@ -1,0 +1,252 @@
+{
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "name": "Project Kick-off & Initial Requirements Gathering",
+      "roles": ["ARCH-PRIN-01", "ARCH-SR-02", "ENG-SR-MOB", "ENG-SR-BACK", "DATA-LEAD-01", "OPS-SR-SEC"],
+      "duration in working days": 3.0,
+      "cost in USD": 2400.00,
+      "dependencies": []
+    },
+    {
+      "id": "TASK-002",
+      "name": "Detailed Scope Definition & User Stories",
+      "roles": ["ARCH-SR-02", "ENG-SR-MOB", "ENG-SR-BACK", "DATA-LEAD-01"],
+      "duration in working days": 4.0,
+      "cost in USD": 2000.00,
+      "dependencies": ["TASK-001"]
+    },
+    {
+      "id": "TASK-003",
+      "name": "System Architecture Design (Backend, Database, APIs)",
+      "roles": ["ARCH-PRIN-01", "ARCH-SR-02", "DATA-LEAD-01", "ENG-SR-BACK"],
+      "duration in working days": 7.0,
+      "cost in USD": 3955.00,
+      "dependencies": ["TASK-002"]
+    },
+    {
+      "id": "TASK-004",
+      "name": "Mobile Application Architecture Design (Cross-platform, GPS, Notifications)",
+      "roles": ["ARCH-SR-02", "ENG-SR-MOB"],
+      "duration in working days": 5.0,
+      "cost in USD": 1275.00,
+      "dependencies": ["TASK-002"]
+    },
+    {
+      "id": "TASK-005",
+      "name": "Database Schema Design & Optimization",
+      "roles": ["ARCH-SR-02", "DATA-LEAD-01"],
+      "duration in working days": 4.0,
+      "cost in USD": 1100.00,
+      "dependencies": ["TASK-003"]
+    },
+    {
+      "id": "TASK-006",
+      "name": "Security Architecture & Compliance Planning",
+      "roles": ["ARCH-PRIN-01", "OPS-SR-SEC"],
+      "duration in working days": 4.0,
+      "cost in USD": 1200.00,
+      "dependencies": ["TASK-003"]
+    },
+    {
+      "id": "TASK-007",
+      "name": "Core API Development (User, Order, Restaurant Management)",
+      "roles": ["ENG-SR-BACK", "ENG-MID-BACK"],
+      "duration in working days": 10.0,
+      "cost in USD": 2000.00,
+      "dependencies": ["TASK-003", "TASK-005"]
+    },
+    {
+      "id": "TASK-008",
+      "name": "Real-time GPS Tracking Service Development",
+      "roles": ["ENG-SR-BACK", "DATA-LEAD-01"],
+      "duration in working days": 12.0,
+      "cost in USD": 2940.00,
+      "dependencies": ["TASK-003", "TASK-005"]
+    },
+    {
+      "id": "TASK-009",
+      "name": "Push Notification Service Integration (Backend)",
+      "roles": ["ENG-SR-BACK", "ENG-MID-BACK"],
+      "duration in working days": 8.0,
+      "cost in USD": 1600.00,
+      "dependencies": ["TASK-003"]
+    },
+    {
+      "id": "TASK-010",
+      "name": "Database Implementation & Initial Data Migration",
+      "roles": ["DATA-LEAD-01", "ENG-MID-BACK"],
+      "duration in working days": 6.0,
+      "cost in USD": 1290.00,
+      "dependencies": ["TASK-005", "TASK-007"]
+    },
+    {
+      "id": "TASK-011",
+      "name": "Backend Security Implementation & API Hardening",
+      "roles": ["OPS-SR-SEC", "ENG-SR-BACK"],
+      "duration in working days": 7.0,
+      "cost in USD": 1680.00,
+      "dependencies": ["TASK-007", "TASK-009"]
+    },
+    {
+      "id": "TASK-012",
+      "name": "Customer App UI/UX Implementation",
+      "roles": ["ENG-SR-MOB", "ENG-MID-FRONT"],
+      "duration in working days": 10.0,
+      "cost in USD": 1900.00,
+      "dependencies": ["TASK-004"]
+    },
+    {
+      "id": "TASK-013",
+      "name": "Customer App Core Features (Order, Payment, Profile)",
+      "roles": ["ENG-SR-MOB", "ENG-MID-FRONT"],
+      "duration in working days": 15.0,
+      "cost in USD": 2850.00,
+      "dependencies": ["TASK-004", "TASK-007", "TASK-009"]
+    },
+    {
+      "id": "TASK-014",
+      "name": "Customer App GPS Integration & Map Display",
+      "roles": ["ENG-SR-MOB"],
+      "duration in working days": 8.0,
+      "cost in USD": 880.00,
+      "dependencies": ["TASK-004", "TASK-008"]
+    },
+    {
+      "id": "TASK-015",
+      "name": "Customer App Push Notification Handling",
+      "roles": ["ENG-SR-MOB"],
+      "duration in working days": 5.0,
+      "cost in USD": 550.00,
+      "dependencies": ["TASK-004", "TASK-009"]
+    },
+    {
+      "id": "TASK-016",
+      "name": "Driver App UI/UX Implementation",
+      "roles": ["ENG-SR-MOB", "ENG-MID-FRONT"],
+      "duration in working days": 8.0,
+      "cost in USD": 1520.00,
+      "dependencies": ["TASK-004"]
+    },
+    {
+      "id": "TASK-017",
+      "name": "Driver App Core Features (Order Assignment, Status Updates)",
+      "roles": ["ENG-SR-MOB", "ENG-MID-FRONT"],
+      "duration in working days": 12.0,
+      "cost in USD": 2280.00,
+      "dependencies": ["TASK-004", "TASK-007", "TASK-009"]
+    },
+    {
+      "id": "TASK-018",
+      "name": "Driver App Real-time GPS Tracking & Navigation",
+      "roles": ["ENG-SR-MOB"],
+      "duration in working days": 10.0,
+      "cost in USD": 1100.00,
+      "dependencies": ["TASK-004", "TASK-008"]
+    },
+    {
+      "id": "TASK-019",
+      "name": "Driver App Push Notification Handling",
+      "roles": ["ENG-SR-MOB"],
+      "duration in working days": 5.0,
+      "cost in USD": 550.00,
+      "dependencies": ["TASK-004", "TASK-009"]
+    },
+    {
+      "id": "TASK-020",
+      "name": "API Integration Testing",
+      "roles": ["QA-AUTO-03", "ENG-SR-BACK"],
+      "duration in working days": 6.0,
+      "cost in USD": 1140.00,
+      "dependencies": ["TASK-007", "TASK-008", "TASK-009", "TASK-010", "TASK-011"]
+    },
+    {
+      "id": "TASK-021",
+      "name": "Mobile App (Customer) End-to-End Testing",
+      "roles": ["QA-AUTO-03", "ENG-SR-MOB"],
+      "duration in working days": 8.0,
+      "cost in USD": 1480.00,
+      "dependencies": ["TASK-013", "TASK-014", "TASK-015", "TASK-020"]
+    },
+    {
+      "id": "TASK-022",
+      "name": "Mobile App (Driver) End-to-End Testing",
+      "roles": ["QA-AUTO-03", "ENG-SR-MOB"],
+      "duration in working days": 8.0,
+      "cost in USD": 1480.00,
+      "dependencies": ["TASK-017", "TASK-018", "TASK-019", "TASK-020"]
+    },
+    {
+      "id": "TASK-023",
+      "name": "Performance & Load Testing",
+      "roles": ["OPS-SR-SEC", "ENG-SR-BACK"],
+      "duration in working days": 5.0,
+      "cost in USD": 1200.00,
+      "dependencies": ["TASK-020"]
+    },
+    {
+      "id": "TASK-024",
+      "name": "Security Testing & Vulnerability Assessment",
+      "roles": ["OPS-SR-SEC"],
+      "duration in working days": 6.0,
+      "cost in USD": 750.00,
+      "dependencies": ["TASK-011", "TASK-020"]
+    },
+    {
+      "id": "TASK-025",
+      "name": "Infrastructure Setup & Configuration (Production)",
+      "roles": ["ARCH-PRIN-01", "OPS-SR-SEC"],
+      "duration in working days": 5.0,
+      "cost in USD": 1500.00,
+      "dependencies": ["TASK-003", "TASK-006"]
+    },
+    {
+      "id": "TASK-026",
+      "name": "CI/CD Pipeline Setup for Mobile & Backend",
+      "roles": ["OPS-SR-SEC"],
+      "duration in working days": 4.0,
+      "cost in USD": 500.00,
+      "dependencies": ["TASK-025"]
+    },
+    {
+      "id": "TASK-027",
+      "name": "Mobile App Store Submission (Apple App Store, Google Play Store)",
+      "roles": ["ENG-SR-MOB"],
+      "duration in working days": 3.0,
+      "cost in USD": 330.00,
+      "dependencies": ["TASK-021", "TASK-022", "TASK-023", "TASK-024"]
+    },
+    {
+      "id": "TASK-028",
+      "name": "Production Deployment & Monitoring Setup",
+      "roles": ["OPS-SR-SEC", "ENG-SR-BACK"],
+      "duration in working days": 3.0,
+      "cost in USD": 720.00,
+      "dependencies": ["TASK-026", "TASK-027"]
+    },
+    {
+      "id": "TASK-029",
+      "name": "Project Launch",
+      "roles": ["ARCH-PRIN-01", "ARCH-SR-02", "ENG-SR-MOB", "ENG-SR-BACK", "DATA-LEAD-01", "OPS-SR-SEC"],
+      "duration in working days": 1.0,
+      "cost in USD": 800.00,
+      "dependencies": ["TASK-028"]
+    },
+    {
+      "id": "TASK-030",
+      "name": "Initial Monitoring & Bug Fixing",
+      "roles": ["OPS-SR-SEC", "ENG-SR-BACK", "ENG-SR-MOB"],
+      "duration in working days": 7.0,
+      "cost in USD": 2450.00,
+      "dependencies": ["TASK-029"]
+    },
+    {
+      "id": "TASK-031",
+      "name": "Documentation & Knowledge Transfer",
+      "roles": ["ARCH-SR-02", "ENG-SR-BACK", "ENG-SR-MOB", "DATA-LEAD-01", "OPS-SR-SEC"],
+      "duration in working days": 5.0,
+      "cost in USD": 3125.00,
+      "dependencies": ["TASK-030"]
+    }
+  ]
+}

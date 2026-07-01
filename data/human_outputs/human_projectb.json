@@ -1,0 +1,228 @@
+{
+  "tasks": [
+    {
+      "id": "T1",
+      "name": "Project Initiation & Requirement Analysis",
+      "cost in USD": 2135,
+      "duration in working days": 7,
+      "roles": [
+        "Principal Cloud Architect",
+        "Lead Data Engineer"
+      ],
+      "dependencies": [],
+      "parent_id": "ROOT"
+    },
+    {
+      "id": "T2",
+      "name": "System Architecture & Snowflake Schema Design",
+      "cost in USD": 8960,
+      "duration in working days": 14,
+      "roles": [
+        "Principal Cloud Architect",
+        "Senior Software Architect"
+      ],
+      "dependencies": ["T1"],
+      "parent_id": "T1"
+    },
+    {
+      "id": "T3",
+      "name": "Infrastructure Provisioning and Cloud",
+      "cost in USD": 2100,
+      "duration in working days": 7,
+      "roles": [
+        "Principal Cloud Architect",
+        "Senior DevOps & Security Engineer"
+      ],
+      "dependencies": ["T2"],
+      "parent_id": "T2"
+    },
+    {
+      "id": "T4",
+      "name": "IoT Sensor Data Source Integration",
+      "cost in USD": 3010,
+      "duration in working days": 14,
+      "roles": [
+        "Lead Data Engineer",
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T3"],
+      "parent_id": "T3"
+    },
+    {
+      "id": "T5",
+      "name": "Real-Time Data Ingestion Pipeline Development",
+      "cost in USD": 5145,
+      "duration in working days": 21,
+      "roles": [
+        "Lead Data Engineer",
+        "Senior Backend Engineer"
+      ],
+      "dependencies": ["T4"],
+      "parent_id": "T4"
+    },
+    {
+      "id": "T6",
+      "name": "Stream Processing & Data Transformation Layer",
+      "cost in USD": 1820,
+      "duration in working days": 14,
+      "roles": [
+        "Lead Data Engineer"
+      ],
+      "dependencies": ["T5"],
+      "parent_id": "T5"
+    },
+    {
+      "id": "T7",
+      "name": "Snowflake Data Warehouse Configuration",
+      "cost in USD": 1925,
+      "duration in working days": 7,
+      "roles": [
+        "Senior Software Architect",
+        "Lead Data Engineer"
+      ],
+      "dependencies": ["T6"],
+      "parent_id": "T6"
+    },
+    {
+      "id": "T8",
+      "name": "Database Migration & Logging Middleware Setup",
+      "cost in USD": 595,
+      "duration in working days": 7,
+      "roles": [
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T7"],
+      "parent_id": "T7"
+    },
+    {
+      "id": "T9",
+      "name": "Anomaly Detection Model Design",
+      "cost in USD": 3850,
+      "duration in working days": 14,
+      "roles": [
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T7"],
+      "parent_id": "T7"
+    },
+    {
+      "id": "T10",
+      "name": "Machine Learning Model Training & Validation",
+      "cost in USD": 2730,
+      "duration in working days": 21,
+      "roles": [
+        "Lead Data Engineer"
+      ],
+      "dependencies": ["T9"],
+      "parent_id": "T9"
+    },
+    {
+      "id": "T11",
+      "name": "Automation Scripts & Scheduling Configuration",
+      "cost in USD": 1505,
+      "duration in working days": 7,
+      "roles": [
+        "Lead Data Engineer",
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T10"],
+      "parent_id": "T10"
+    },
+    {
+      "id": "T12",
+      "name": "API Development for Analytics Access",
+      "cost in USD": 2800,
+      "duration in working days": 14,
+      "roles": [
+        "Senior Backend Engineer",
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T11"],
+      "parent_id": "T11"
+    },
+    {
+      "id": "T13",
+      "name": "Security Hardening & Compliance Auditing",
+      "cost in USD": 2100,
+      "duration in working days": 7,
+      "roles": [
+        "Senior DevOps & Security Engineer",
+        "Principal Cloud Architect"
+      ],
+      "dependencies": ["T12"],
+      "parent_id": "T12"
+    },
+    {
+      "id": "T14",
+      "name": "CI/CD Pipeline & Containerization Setup",
+      "cost in USD": 875,
+      "duration in working days": 7,
+      "roles": [
+        "Senior DevOps & Security Engineer"
+      ],
+      "dependencies": ["T13"],
+      "parent_id": "T13"
+    },
+    {
+      "id": "T15",
+      "name": "Automated Testing & Mock Payload Validation",
+      "cost in USD": 2240,
+      "duration in working days": 14,
+      "roles": [
+        "Automated QA Engineer",
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T14"],
+      "parent_id": "T14"
+    },
+    {
+      "id": "T16",
+      "name": "End-to-End Data Flow Validation",
+      "cost in USD": 1435,
+      "duration in working days": 7,
+      "roles": [
+        "Automated QA Engineer",
+        "Lead Data Engineer"
+      ],
+      "dependencies": ["T15"],
+      "parent_id": "T15"
+    },
+    {
+      "id": "T17",
+      "name": "User Acceptance Testing (UAT)",
+      "cost in USD": 1330,
+      "duration in working days": 7,
+      "roles": [
+        "Automated QA Engineer",
+        "Senior Backend Engineer"
+      ],
+      "dependencies": ["T16"],
+      "parent_id": "T16"
+    },
+    {
+      "id": "T18",
+      "name": "Production Deployment & Monitoring Setup",
+      "cost in USD": 2100,
+      "duration in working days": 7,
+      "roles": [
+        "Automated QA Engineer",
+        "Senior Backend Engineer"
+      ],
+      "dependencies": ["T17"],
+      "parent_id": "T17"
+    },
+    {
+      "id": "T19",
+      "name": "Post-Deployment Monitoring & Optimisation",
+      "cost in USD": 2100,
+      "duration in working days": 7,
+      "roles": [
+        "Lead Data Engineer",
+        "Senior DevOps & Security Engineer",
+        "Automated QA Engineer"
+      ],
+      "dependencies": ["T18"],
+      "parent_id": "T18"
+    }
+  ]
+} 

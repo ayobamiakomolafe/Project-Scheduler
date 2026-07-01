@@ -1,0 +1,164 @@
+{
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "name": "Requirements Gathering & Analysis",
+      "roles": ["ARCH-PRIN-01", "DATA-LEAD-01"],
+      "duration in working days": 3.0,
+      "cost in USD": 915.00,
+      "dependencies": []
+    },
+    {
+      "id": "TASK-002",
+      "name": "High-Level Architecture Design",
+      "roles": ["ARCH-PRIN-01", "ARCH-SR-02", "DATA-LEAD-01"],
+      "duration in working days": 4.0,
+      "cost in USD": 1800.00,
+      "dependencies": ["TASK-001"]
+    },
+    {
+      "id": "TASK-003",
+      "name": "Detailed Infrastructure & Data Schema Design",
+      "roles": ["ARCH-SR-02", "DATA-LEAD-01", "OPS-SR-SEC"],
+      "duration in working days": 5.0,
+      "cost in USD": 2000.00,
+      "dependencies": ["TASK-002"]
+    },
+    {
+      "id": "TASK-004",
+      "name": "Project Planning & WBS Finalization",
+      "roles": ["ARCH-PRIN-01"],
+      "duration in working days": 2.0,
+      "cost in USD": 350.00,
+      "dependencies": ["TASK-003"]
+    },
+    {
+      "id": "TASK-005",
+      "name": "Cloud Infrastructure Provisioning",
+      "roles": ["ARCH-PRIN-01", "OPS-SR-SEC"],
+      "duration in working days": 6.0,
+      "cost in USD": 1800.00,
+      "dependencies": ["TASK-003", "TASK-004"]
+    },
+    {
+      "id": "TASK-006",
+      "name": "IoT Data Ingestion Service Setup",
+      "roles": ["ENG-SR-BACK", "OPS-SR-SEC"],
+      "duration in working days": 7.0,
+      "cost in USD": 1680.00,
+      "dependencies": ["TASK-005"]
+    },
+    {
+      "id": "TASK-007",
+      "name": "Real-time Data Processing Engine Development",
+      "roles": ["DATA-LEAD-01", "ENG-SR-BACK"],
+      "duration in working days": 10.0,
+      "cost in USD": 2450.00,
+      "dependencies": ["TASK-006"]
+    },
+    {
+      "id": "TASK-008",
+      "name": "Snowflake Database & Schema Implementation",
+      "roles": ["ARCH-SR-02", "DATA-LEAD-01"],
+      "duration in working days": 6.0,
+      "cost in USD": 1650.00,
+      "dependencies": ["TASK-003", "TASK-005"]
+    },
+    {
+      "id": "TASK-009",
+      "name": "Data Loading & ETL into Snowflake",
+      "roles": ["DATA-LEAD-01", "ENG-MID-BACK"],
+      "duration in working days": 8.0,
+      "cost in USD": 1720.00,
+      "dependencies": ["TASK-007", "TASK-008"]
+    },
+    {
+      "id": "TASK-010",
+      "name": "Data Exploration & Feature Engineering",
+      "roles": ["DATA-LEAD-01"],
+      "duration in working days": 7.0,
+      "cost in USD": 910.00,
+      "dependencies": ["TASK-009"]
+    },
+    {
+      "id": "TASK-011",
+      "name": "Anomaly Detection Model Selection & Prototyping",
+      "roles": ["DATA-LEAD-01"],
+      "duration in working days": 8.0,
+      "cost in USD": 1040.00,
+      "dependencies": ["TASK-010"]
+    },
+    {
+      "id": "TASK-012",
+      "name": "Model Training, Evaluation & Optimization",
+      "roles": ["DATA-LEAD-01"],
+      "duration in working days": 10.0,
+      "cost in USD": 1300.00,
+      "dependencies": ["TASK-011"]
+    },
+    {
+      "id": "TASK-013",
+      "name": "Model Deployment & Integration",
+      "roles": ["DATA-LEAD-01", "ENG-SR-BACK"],
+      "duration in working days": 9.0,
+      "cost in USD": 2205.00,
+      "dependencies": ["TASK-012"]
+    },
+    {
+      "id": "TASK-014",
+      "name": "Pipeline Orchestration & Automation Scripts",
+      "roles": ["DATA-LEAD-01", "OPS-SR-SEC"],
+      "duration in working days": 7.0,
+      "cost in USD": 1785.00,
+      "dependencies": ["TASK-009", "TASK-013"]
+    },
+    {
+      "id": "TASK-015",
+      "name": "Monitoring, Logging & Alerting Setup",
+      "roles": ["OPS-SR-SEC", "ENG-MID-BACK"],
+      "duration in working days": 6.0,
+      "cost in USD": 1260.00,
+      "dependencies": ["TASK-014"]
+    },
+    {
+      "id": "TASK-016",
+      "name": "Automated Testing Framework Development",
+      "roles": ["QA-AUTO-03", "ENG-SR-BACK"],
+      "duration in working days": 8.0,
+      "cost in USD": 1520.00,
+      "dependencies": ["TASK-014"]
+    },
+    {
+      "id": "TASK-017",
+      "name": "Security & Compliance Auditing",
+      "roles": ["ARCH-PRIN-01", "OPS-SR-SEC"],
+      "duration in working days": 5.0,
+      "cost in USD": 1500.00,
+      "dependencies": ["TASK-015", "TASK-016"]
+    },
+    {
+      "id": "TASK-018",
+      "name": "Production Deployment",
+      "roles": ["OPS-SR-SEC", "DATA-LEAD-01"],
+      "duration in working days": 4.0,
+      "cost in USD": 1020.00,
+      "dependencies": ["TASK-017"]
+    },
+    {
+      "id": "TASK-019",
+      "name": "Documentation & Training",
+      "roles": ["ENG-SR-BACK", "DATA-LEAD-01"],
+      "duration in working days": 5.0,
+      "cost in USD": 1225.00,
+      "dependencies": ["TASK-018"]
+    },
+    {
+      "id": "TASK-020",
+      "name": "Project Review & Closure",
+      "roles": ["ARCH-PRIN-01"],
+      "duration in working days": 1.0,
+      "cost in USD": 175.00,
+      "dependencies": ["TASK-019"]
+    }
+  ]
+}

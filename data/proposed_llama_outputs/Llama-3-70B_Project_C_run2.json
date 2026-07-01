@@ -1,0 +1,181 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Define Project Scope",
+            "duration": 5,
+            "resources": [
+                "Project Manager"
+            ],
+            "cost": 2000.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Design Dual Interfaces",
+            "duration": 10,
+            "resources": [
+                "UX Designer",
+                "UI Designer"
+            ],
+            "cost": 8000.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "Develop Real-Time GPS Tracking",
+            "duration": 15,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 12000.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "Implement Push Notifications",
+            "duration": 8,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 6400.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Develop Customer Interface",
+            "duration": 12,
+            "resources": [
+                "Senior Dev",
+                "Junior Dev"
+            ],
+            "cost": 9600.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "Develop Driver Interface",
+            "duration": 12,
+            "resources": [
+                "Senior Dev",
+                "Junior Dev"
+            ],
+            "cost": 9600.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T7",
+            "name": "Integrate GPS Tracking with Customer Interface",
+            "duration": 10,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 8000.0,
+            "dependencies": [
+                "T3",
+                "T5"
+            ]
+        },
+        {
+            "id": "T8",
+            "name": "Integrate GPS Tracking with Driver Interface",
+            "duration": 10,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 8000.0,
+            "dependencies": [
+                "T3",
+                "T6"
+            ]
+        },
+        {
+            "id": "T9",
+            "name": "Integrate Push Notifications with Customer Interface",
+            "duration": 8,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 6400.0,
+            "dependencies": [
+                "T4",
+                "T5"
+            ]
+        },
+        {
+            "id": "T10",
+            "name": "Integrate Push Notifications with Driver Interface",
+            "duration": 8,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 6400.0,
+            "dependencies": [
+                "T4",
+                "T6"
+            ]
+        },
+        {
+            "id": "T11",
+            "name": "Test and Debug Customer Interface",
+            "duration": 10,
+            "resources": [
+                "QA Engineer"
+            ],
+            "cost": 6000.0,
+            "dependencies": [
+                "T7",
+                "T9"
+            ]
+        },
+        {
+            "id": "T12",
+            "name": "Test and Debug Driver Interface",
+            "duration": 10,
+            "resources": [
+                "QA Engineer"
+            ],
+            "cost": 6000.0,
+            "dependencies": [
+                "T8",
+                "T10"
+            ]
+        },
+        {
+            "id": "T13",
+            "name": "Deploy Mobile Application",
+            "duration": 5,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 4000.0,
+            "dependencies": [
+                "T11",
+                "T12"
+            ]
+        },
+        {
+            "id": "T14",
+            "name": "Maintain and Update Mobile Application",
+            "duration": 0,
+            "resources": [
+                "Senior Dev",
+                "Junior Dev"
+            ],
+            "cost": 0.0,
+            "dependencies": [
+                "T13"
+            ]
+        }
+    ]
+}

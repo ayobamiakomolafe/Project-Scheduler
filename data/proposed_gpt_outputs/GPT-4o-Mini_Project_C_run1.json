@@ -1,0 +1,137 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Project Planning",
+            "duration": 5,
+            "resources": [
+                "Project Manager"
+            ],
+            "cost": 875.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Requirements Gathering",
+            "duration": 7,
+            "resources": [
+                "Business Analyst"
+            ],
+            "cost": 595.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "UI/UX Design",
+            "duration": 10,
+            "resources": [
+                "UI/UX Designer"
+            ],
+            "cost": 1000.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "Backend Development",
+            "duration": 15,
+            "resources": [
+                "Senior Backend Engineer"
+            ],
+            "cost": 1725.0,
+            "dependencies": [
+                "T3"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Frontend Development (Customer Interface)",
+            "duration": 12,
+            "resources": [
+                "Frontend Developer (Mid-Level)"
+            ],
+            "cost": 960.0,
+            "dependencies": [
+                "T3"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "Frontend Development (Driver Interface)",
+            "duration": 12,
+            "resources": [
+                "Frontend Developer (Mid-Level)"
+            ],
+            "cost": 960.0,
+            "dependencies": [
+                "T3"
+            ]
+        },
+        {
+            "id": "T7",
+            "name": "GPS Tracking Integration",
+            "duration": 8,
+            "resources": [
+                "Senior Mobile Applications Engineer"
+            ],
+            "cost": 880.0,
+            "dependencies": [
+                "T4"
+            ]
+        },
+        {
+            "id": "T8",
+            "name": "Push Notifications Setup",
+            "duration": 5,
+            "resources": [
+                "Senior Mobile Applications Engineer"
+            ],
+            "cost": 550.0,
+            "dependencies": [
+                "T4"
+            ]
+        },
+        {
+            "id": "T9",
+            "name": "Testing and QA",
+            "duration": 10,
+            "resources": [
+                "Automated QA Engineer"
+            ],
+            "cost": 750.0,
+            "dependencies": [
+                "T5",
+                "T6",
+                "T7",
+                "T8"
+            ]
+        },
+        {
+            "id": "T10",
+            "name": "Deployment",
+            "duration": 3,
+            "resources": [
+                "Senior DevOps & Security Engineer"
+            ],
+            "cost": 375.0,
+            "dependencies": [
+                "T9"
+            ]
+        },
+        {
+            "id": "T11",
+            "name": "Post-Deployment Support",
+            "duration": 5,
+            "resources": [
+                "Support Engineer"
+            ],
+            "cost": 500.0,
+            "dependencies": [
+                "T10"
+            ]
+        }
+    ]
+}

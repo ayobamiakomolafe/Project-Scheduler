@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "name": "Project Initiation",
+      "roles": ["Principal Cloud Architect"],
+      "duration in working days": 3.0,
+      "cost in USD": 525.00,
+      "dependencies": []
+    },
+    {
+      "id": "TASK-002",
+      "name": "Requirements Gathering",
+      "roles": ["Senior Mobile Applications Engineer", "Senior Backend Engineer"],
+      "duration in working days": 5.0,
+      "cost in USD": 1,

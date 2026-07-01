@@ -1,0 +1,236 @@
+{
+  "tasks": [
+    {
+      "id": "T1",
+      "name": "Project Initiation & Requirements Gathering",
+      "cost in USD": 2240,
+      "duration in working days": 7,
+      "roles": [
+        "Principal Cloud Architect",
+        "Senior Software Architect"
+      ],
+      "dependencies": [],
+      "parent_id": "ROOT"
+    },
+    {
+      "id": "T2",
+      "name": "Regulatory Compliance & Security Planning",
+      "cost in USD": 2100,
+      "duration in working days": 7,
+      "roles": [
+        "Principal Cloud Architect",
+        "Senior DevOps & Security Engineer"
+      ],
+      "dependencies": ["T1"],
+      "parent_id": "T1"
+    },
+    {
+      "id": "T3",
+      "name": "System Architecture & Database Schema Design",
+      "cost in USD": 4480,
+      "duration in working days": 14,
+      "roles": [
+        "Principal Cloud Architect",
+        "Senior Software Architect"
+      ],
+      "dependencies": ["T2"],
+      "parent_id": "T2"
+    },
+    {
+      "id": "T4",
+      "name": "Infrastructure Provisioning & CI/CD Setup",
+      "cost in USD": 875,
+      "duration in working days": 7,
+      "roles": [
+        "Senior DevOps & Security Engineer"
+      ],
+      "dependencies": ["T3"],
+      "parent_id": "T3"
+    },
+    {
+      "id": "T5",
+      "name": "Backend API Development for Patient Portal",
+      "cost in USD": 4200,
+      "duration in working days": 21,
+      "roles": [
+        "Senior Backend Engineer",
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T3"],
+      "parent_id": "T3"
+    },
+    {
+      "id": "T6",
+      "name": "Patient Authentication & Identity Management",
+      "cost in USD": 1680,
+      "duration in working days": 7,
+      "roles": [
+        "Senior Backend Engineer",
+        "Senior DevOps & Security Engineer"
+      ],
+      "dependencies": ["T5"],
+      "parent_id": "T5"
+    },
+    {
+      "id": "T7",
+      "name": "Telemedicine Video Integration",
+      "cost in USD": 1610,
+      "duration in working days": 14,
+      "roles": [
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T5"],
+      "parent_id": "T5"
+    },
+    {
+      "id": "T8",
+      "name": "Appointment Scheduling Module",
+      "cost in USD": 2310,
+      "duration in working days": 14,
+      "roles": [
+        "Mid-Level Backend Engineer",
+        "Frontend Developer"
+      ],
+      "dependencies": ["T5"],
+      "parent_id": "T5"
+    },
+    {
+      "id": "T9",
+      "name": "Stripe Payment Integration",
+      "cost in USD": 1820,
+      "duration in working days": 7,
+      "roles": [
+        "Senior Backend Engineer",
+        "Senior Software Architect"
+      ],
+      "dependencies": ["T5"],
+      "parent_id": "T5"
+    },
+    {
+      "id": "T10",
+      "name": "Frontend Patient Portal UI Development",
+      "cost in USD": 1680,
+      "duration in working days": 21,
+      "roles": [
+        "Frontend Developer"
+      ],
+      "dependencies": ["T3"],
+      "parent_id": "T3"
+    },
+    {
+      "id": "T11",
+      "name": "Dashboard & Form Validation Implementation",
+      "cost in USD": 560,
+      "duration in working days": 7,
+      "roles": [
+        "Frontend Developer"
+      ],
+      "dependencies": ["T10"],
+      "parent_id": "T10"
+    },
+    {
+      "id": "T12",
+      "name": "Mobile Responsiveness & Cross-Browser Optimization",
+      "cost in USD": 1330,
+      "duration in working days": 7,
+      "roles": [
+        "Frontend Developer",
+        "Senior Mobile Applications Engineer"
+      ],
+      "dependencies": ["T10"],
+      "parent_id": "T10"
+    },
+    {
+      "id": "T13",
+      "name": "Database Migration & Logging Middleware Setup",
+      "cost in USD": 595,
+      "duration in working days": 7,
+      "roles": [
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T5"],
+      "parent_id": "T5"
+    },
+    {
+      "id": "T14",
+      "name": "Security Hardening & Encryption Implementation",
+      "cost in USD": 1680,
+      "duration in working days": 7,
+      "roles": [
+        "Senior DevOps & Security Engineer",
+        "Senior Backend Engineer"
+      ],
+      "dependencies": ["T6"],
+      "parent_id": "T6"
+    },
+    {
+      "id": "T15",
+      "name": "Automated Testing & QA Validation",
+      "cost in USD": 2240,
+      "duration in working days": 14,
+      "roles": [
+        "Automated QA Engineer",
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": [
+        "T7",
+        "T8",
+        "T9",
+        "T11",
+        "T12",
+        "T13",
+        "T14"
+      ],
+      "parent_id": "ROOT"
+    },
+    {
+      "id": "T16",
+      "name": "End-to-End Compliance Testing",
+      "cost in USD": 1400,
+      "duration in working days": 7,
+      "roles": [
+        "Automated QA Engineer",
+        "Senior DevOps & Security Engineer"
+      ],
+      "dependencies": ["T15"],
+      "parent_id": "T15"
+    },
+    {
+      "id": "T17",
+      "name": "User Acceptance Testing (UAT)",
+      "cost in USD": 1085,
+      "duration in working days": 7,
+      "roles": [
+        "Frontend Developer",
+        "Automated QA Engineer"
+      ],
+      "dependencies": ["T16"],
+      "parent_id": "T16"
+    },
+    {
+      "id": "T18",
+      "name": "Production Deployment & Monitoring Setup",
+      "cost in USD": 2100,
+      "duration in working days": 7,
+      "roles": [
+        "Senior DevOps & Security Engineer",
+        "Principal Cloud Architect"
+      ],
+      "dependencies": ["T17"],
+      "parent_id": "T17"
+    },
+    {
+      "id": "T19",
+      "name": "Post-Deployment Support & Optimization",
+      "cost in USD": 3780,
+      "duration in working days": 14,
+      "roles": [
+        "Senior Backend Engineer",
+        "Frontend Developer",
+        "QA Engineer"
+      ],
+      "dependencies": ["T18"],
+      "parent_id": "T18"
+    }
+  ]
+}

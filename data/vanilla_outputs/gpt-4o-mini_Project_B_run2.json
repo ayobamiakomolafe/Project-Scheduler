@@ -1,0 +1,76 @@
+{
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "name": "Project Initiation and Planning",
+      "roles": ["ARCH-PRIN-01", "DATA-LEAD-01"],
+      "duration in working days": 5.0,
+      "cost in USD": 1625.00,
+      "dependencies": []
+    },
+    {
+      "id": "TASK-002",
+      "name": "Requirements Gathering and Analysis",
+      "roles": ["ARCH-SR-02", "DATA-LEAD-01"],
+      "duration in working days": 5.0,
+      "cost in USD": 1075.00,
+      "dependencies": ["TASK-001"]
+    },
+    {
+      "id": "TASK-003",
+      "name": "System Architecture Design",
+      "roles": ["ARCH-PRIN-01"],
+      "duration in working days": 7.0,
+      "cost in USD": 1225.00,
+      "dependencies": ["TASK-002"]
+    },
+    {
+      "id": "TASK-004",
+      "name": "Data Pipeline Development",
+      "roles": ["DATA-LEAD-01", "ENG-SR-BACK"],
+      "duration in working days": 10.0,
+      "cost in USD": 2450.00,
+      "dependencies": ["TASK-003"]
+    },
+    {
+      "id": "TASK-005",
+      "name": "Integration with Snowflake",
+      "roles": ["DATA-LEAD-01", "ENG-MID-BACK"],
+      "duration in working days": 5.0,
+      "cost in USD": 650.00,
+      "dependencies": ["TASK-004"]
+    },
+    {
+      "id": "TASK-006",
+      "name": "Anomaly Detection Model Development",
+      "roles": ["DATA-LEAD-01"],
+      "duration in working days": 8.0,
+      "cost in USD": 1040.00,
+      "dependencies": ["TASK-005"]
+    },
+    {
+      "id": "TASK-007",
+      "name": "Testing and Validation",
+      "roles": ["QA-AUTO-03", "OPS-SR-SEC"],
+      "duration in working days": 5.0,
+      "cost in USD": 1000.00,
+      "dependencies": ["TASK-006"]
+    },
+    {
+      "id": "TASK-008",
+      "name": "Deployment and Monitoring Setup",
+      "roles": ["OPS-SR-SEC"],
+      "duration in working days": 5.0,
+      "cost in USD": 625.00,
+      "dependencies": ["TASK-007"]
+    },
+    {
+      "id": "TASK-009",
+      "name": "Project Closure and Documentation",
+      "roles": ["ARCH-SR-02"],
+      "duration in working days": 3.0,
+      "cost in USD": 435.00,
+      "dependencies": ["TASK-008"]
+    }
+  ]
+}

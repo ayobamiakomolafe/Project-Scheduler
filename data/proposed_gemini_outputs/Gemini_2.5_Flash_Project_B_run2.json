@@ -1,0 +1,263 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Project Kick-off and Requirements Gathering",
+            "duration": 5,
+            "resources": [
+                "Project Manager",
+                "Data Engineer",
+                "Data Scientist"
+            ],
+            "cost": 4650.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Architecture Design for Data Pipeline",
+            "duration": 7,
+            "resources": [
+                "Data Engineer",
+                "Data Scientist"
+            ],
+            "cost": 3710.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "Environment Setup (Cloud, Tools)",
+            "duration": 5,
+            "resources": [
+                "Data Engineer",
+                "DevOps Engineer"
+            ],
+            "cost": 1275.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "Develop IoT Sensor Log Fetching Module",
+            "duration": 10,
+            "resources": [
+                "Data Engineer"
+            ],
+            "cost": 1300.0,
+            "dependencies": [
+                "T2",
+                "T3"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Implement Data Transformation and Cleaning",
+            "duration": 8,
+            "resources": [
+                "Data Engineer"
+            ],
+            "cost": 1040.0,
+            "dependencies": [
+                "T4"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "Develop Snowflake Data Loading Module",
+            "duration": 7,
+            "resources": [
+                "Data Engineer"
+            ],
+            "cost": 910.0,
+            "dependencies": [
+                "T5",
+                "T8"
+            ]
+        },
+        {
+            "id": "T7",
+            "name": "Configure Real-time Ingestion Monitoring",
+            "duration": 5,
+            "resources": [
+                "Data Engineer",
+                "DevOps Engineer"
+            ],
+            "cost": 1275.0,
+            "dependencies": [
+                "T6"
+            ]
+        },
+        {
+            "id": "T8",
+            "name": "Design Snowflake Schema and Tables",
+            "duration": 6,
+            "resources": [
+                "Data Engineer"
+            ],
+            "cost": 780.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T9",
+            "name": "Implement Snowflake Security and Access Controls",
+            "duration": 4,
+            "resources": [
+                "Data Engineer"
+            ],
+            "cost": 520.0,
+            "dependencies": [
+                "T8"
+            ]
+        },
+        {
+            "id": "T10",
+            "name": "Data Exploration and Feature Engineering",
+            "duration": 10,
+            "resources": [
+                "Data Scientist"
+            ],
+            "cost": 4000.0,
+            "dependencies": [
+                "T6"
+            ]
+        },
+        {
+            "id": "T11",
+            "name": "Select and Develop Anomaly Detection Model",
+            "duration": 12,
+            "resources": [
+                "Data Scientist"
+            ],
+            "cost": 4800.0,
+            "dependencies": [
+                "T10"
+            ]
+        },
+        {
+            "id": "T12",
+            "name": "Train and Evaluate Anomaly Detection Model",
+            "duration": 8,
+            "resources": [
+                "Data Scientist"
+            ],
+            "cost": 3200.0,
+            "dependencies": [
+                "T11"
+            ]
+        },
+        {
+            "id": "T13",
+            "name": "Integrate Model for Real-time Inference",
+            "duration": 7,
+            "resources": [
+                "Data Scientist",
+                "Data Engineer"
+            ],
+            "cost": 3710.0,
+            "dependencies": [
+                "T12",
+                "T7"
+            ]
+        },
+        {
+            "id": "T14",
+            "name": "Unit Testing of Pipeline Components",
+            "duration": 5,
+            "resources": [
+                "Data Engineer",
+                "Data Scientist",
+                "QA Engineer"
+            ],
+            "cost": 3025.0,
+            "dependencies": [
+                "T6",
+                "T13"
+            ]
+        },
+        {
+            "id": "T15",
+            "name": "Integration Testing of End-to-End Pipeline",
+            "duration": 7,
+            "resources": [
+                "Data Engineer",
+                "Data Scientist",
+                "QA Engineer"
+            ],
+            "cost": 4235.0,
+            "dependencies": [
+                "T14"
+            ]
+        },
+        {
+            "id": "T16",
+            "name": "System Testing and Performance Tuning",
+            "duration": 6,
+            "resources": [
+                "Data Engineer",
+                "Data Scientist",
+                "QA Engineer"
+            ],
+            "cost": 3630.0,
+            "dependencies": [
+                "T15"
+            ]
+        },
+        {
+            "id": "T17",
+            "name": "Develop Deployment Automation",
+            "duration": 5,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 625.0,
+            "dependencies": [
+                "T16"
+            ]
+        },
+        {
+            "id": "T18",
+            "name": "Deploy Pipeline and Model to Production",
+            "duration": 3,
+            "resources": [
+                "DevOps Engineer",
+                "Data Engineer",
+                "Data Scientist"
+            ],
+            "cost": 1965.0,
+            "dependencies": [
+                "T17"
+            ]
+        },
+        {
+            "id": "T19",
+            "name": "Create Technical Documentation",
+            "duration": 5,
+            "resources": [
+                "Data Engineer",
+                "Data Scientist"
+            ],
+            "cost": 2650.0,
+            "dependencies": [
+                "T18"
+            ]
+        },
+        {
+            "id": "T20",
+            "name": "Project Handover and Training",
+            "duration": 3,
+            "resources": [
+                "Project Manager",
+                "Data Engineer",
+                "Data Scientist"
+            ],
+            "cost": 2790.0,
+            "dependencies": [
+                "T19"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+  "Project_A": {
+    "cost": 37765.0,
+    "duration_mean": 10.31578947368421,
+    "duration_var": 23.783625730994153,
+    "depth": 10,
+    "breadth": 5,
+    "balance": 18,
+    "names": "Project Initiation & Requirements Gathering|Regulatory Compliance & Security Planning|System Architecture & Database Schema Design|Infrastructure Provisioning & CI/CD Setup|Backend API Development for Patient Portal|Patient Authentication & Identity Management|Telemedicine Video Integration|Appointment Scheduling Module|Stripe Payment Integration|Frontend Patient Portal UI Development|Dashboard & Form Validation Implementation|Mobile Responsiveness & Cross-Browser Optimization|Database Migration & Logging Middleware Setup|Security Hardening & Encryption Implementation|Automated Testing & QA Validation|End-to-End Compliance Testing|User Acceptance Testing (UAT)|Production Deployment & Monitoring Setup|Post-Deployment Support & Optimization",
+    "role_accuracy": 24.274658529382002
+  },
+  "Project_B": {
+    "cost": 48755.0,
+    "duration_mean": 10.68421052631579,
+    "duration_var": 23.783625730994153,
+    "depth": 18,
+    "breadth": 2,
+    "balance": 50,
+    "names": "Project Initiation & Requirement Analysis|System Architecture & Snowflake Schema Design|Infrastructure Provisioning and Cloud|IoT Sensor Data Source Integration|Real-Time Data Ingestion Pipeline Development|Stream Processing & Data Transformation Layer|Snowflake Data Warehouse Configuration|Database Migration & Logging Middleware Setup|Anomaly Detection Model Design|Machine Learning Model Training & Validation|Automation Scripts & Scheduling Configuration|API Development for Analytics Access|Security Hardening & Compliance Auditing|CI/CD Pipeline & Containerization Setup|Automated Testing & Mock Payload Validation|End-to-End Data Flow Validation|User Acceptance Testing (UAT)|Production Deployment & Monitoring Setup|Post-Deployment Monitoring & Optimisation",
+    "role_accuracy": 24.525618317880127
+  },
+  "Project_C": {
+    "cost": 47915.0,
+    "duration_mean": 10.85,
+    "duration_var": 23.08157894736842,
+    "depth": 12,
+    "breadth": 3,
+    "balance": 8,
+    "names": "Project Initiation & Requirements Gathering|System Architecture & Application Design|Infrastructure Provisioning & Cloud Setup|Backend API Development for Food Ordering System|Database Schema & Migration Setup|Customer Mobile App UI/UX Development|Driver Mobile App UI/UX Development|Real-Time GPS Tracking Integration|Push Notification System Implementation|User Authentication & Identity Management|Payment & Checkout Workflow Integration|Order Management & Delivery Workflow Logic|Real-Time Status Synchronization|Security Hardening & Compliance Auditing|CI/CD Pipeline & Containerization Setup|Automated Testing & Mobile QA Validation|End-to-End Functional Testing|User Acceptance Testing (UAT)|Production Deployment & Monitoring Setup|Post-Deployment Monitoring & Optimization",
+    "role_accuracy": 27.9665862955153
+  }
+}

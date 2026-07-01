@@ -1,0 +1,81 @@
+{
+  "tasks":[
+      {
+         "id":"TASK-001",
+         "name":"Project Planning and Architecture",
+         "roles":[
+            "ARCH-PRIN-01",
+            "ARCH-SR-02"
+         ],
+         "duration in working days":5.0,
+         "cost in USD":1725.00,
+         "dependencies":[]
+      },
+      {
+         "id":"TASK-002",
+         "name":"IoT Sensor Log Ingestion Pipeline Development",
+         "roles":[
+            "DATA-LEAD-01",
+            "ENG-SR-BACK"
+         ],
+         "duration in working days":10.0,
+         "cost in USD":3600.00,
+         "dependencies":[
+            "TASK-001"
+         ]
+      },
+      {
+         "id":"TASK-003",
+         "name":"Snowflake Data Warehouse Setup and Configuration",
+         "roles":[
+            "DATA-LEAD-01",
+            "ARCH-SR-02"
+         ],
+         "duration in working days":5.0,
+         "cost in USD":2000.00,
+         "dependencies":[
+            "TASK-001"
+         ]
+      },
+      {
+         "id":"TASK-004",
+         "name":"Anomaly Detection Model Development",
+         "roles":[
+            "DATA-LEAD-01",
+            "ENG-SR-BACK"
+         ],
+         "duration in working days":12.0,
+         "cost in USD":4440.00,
+         "dependencies":[
+            "TASK-002",
+            "TASK-003"
+         ]
+      },
+      {
+         "id":"TASK-005",
+         "name":"Pipeline Testing and Quality Assurance",
+         "roles":[
+            "QA-AUTO-03",
+            "OPS-SR-SEC"
+         ],
+         "duration in working days":8.0,
+         "cost in USD":2600.00,
+         "dependencies":[
+            "TASK-004"
+         ]
+      },
+      {
+         "id":"TASK-006",
+         "name":"Deployment and Security Hardening",
+         "roles":[
+            "OPS-SR-SEC",
+            "ARCH-PRIN-01"
+         ],
+         "duration in working days":6.0,
+         "cost in USD":2550.00,
+         "dependencies":[
+            "TASK-005"
+         ]
+      }
+   ]
+}

@@ -1,0 +1,361 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Project Kick-off & Planning",
+            "duration": 3,
+            "resources": [
+                "Project Manager",
+                "Business Analyst"
+            ],
+            "cost": 2400.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Requirements Gathering & Analysis",
+            "duration": 7,
+            "resources": [
+                "Business Analyst",
+                "Project Manager"
+            ],
+            "cost": 5600.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "System Architecture & Design",
+            "duration": 8,
+            "resources": [
+                "Senior Developer",
+                "Project Manager"
+            ],
+            "cost": 4120.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "Technology Stack Selection",
+            "duration": 3,
+            "resources": [
+                "Senior Developer",
+                "Project Manager"
+            ],
+            "cost": 1545.0,
+            "dependencies": [
+                "T3"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Database Design & Setup",
+            "duration": 6,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 690.0,
+            "dependencies": [
+                "T3"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "User Authentication & Authorization API Development",
+            "duration": 7,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 805.0,
+            "dependencies": [
+                "T5"
+            ]
+        },
+        {
+            "id": "T7",
+            "name": "Restaurant & Menu Management API Development",
+            "duration": 8,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 920.0,
+            "dependencies": [
+                "T5"
+            ]
+        },
+        {
+            "id": "T8",
+            "name": "Order Management API Development",
+            "duration": 10,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 1150.0,
+            "dependencies": [
+                "T5"
+            ]
+        },
+        {
+            "id": "T9",
+            "name": "Driver Management API Development",
+            "duration": 7,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 805.0,
+            "dependencies": [
+                "T5"
+            ]
+        },
+        {
+            "id": "T10",
+            "name": "Real-time GPS Tracking Backend Integration",
+            "duration": 9,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 1035.0,
+            "dependencies": [
+                "T3",
+                "T5"
+            ]
+        },
+        {
+            "id": "T11",
+            "name": "Push Notification Service Backend Integration",
+            "duration": 6,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 690.0,
+            "dependencies": [
+                "T3"
+            ]
+        },
+        {
+            "id": "T12",
+            "name": "Customer App UI/UX Design",
+            "duration": 10,
+            "resources": [
+                "UI/UX Designer"
+            ],
+            "cost": 4000.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T13",
+            "name": "Driver App UI/UX Design",
+            "duration": 8,
+            "resources": [
+                "UI/UX Designer"
+            ],
+            "cost": 3200.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T14",
+            "name": "Customer App Development - Core Features",
+            "duration": 15,
+            "resources": [
+                "Senior Developer",
+                "Junior Developer"
+            ],
+            "cost": 2925.0,
+            "dependencies": [
+                "T6",
+                "T7",
+                "T8",
+                "T12"
+            ]
+        },
+        {
+            "id": "T15",
+            "name": "Driver App Development - Core Features",
+            "duration": 12,
+            "resources": [
+                "Senior Developer",
+                "Junior Developer"
+            ],
+            "cost": 2340.0,
+            "dependencies": [
+                "T6",
+                "T8",
+                "T9",
+                "T13"
+            ]
+        },
+        {
+            "id": "T16",
+            "name": "Customer App - GPS Tracking Integration",
+            "duration": 7,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 770.0,
+            "dependencies": [
+                "T10",
+                "T14"
+            ]
+        },
+        {
+            "id": "T17",
+            "name": "Driver App - GPS Tracking Integration",
+            "duration": 6,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 660.0,
+            "dependencies": [
+                "T10",
+                "T15"
+            ]
+        },
+        {
+            "id": "T18",
+            "name": "Customer App - Push Notification Integration",
+            "duration": 4,
+            "resources": [
+                "Junior Developer"
+            ],
+            "cost": 340.0,
+            "dependencies": [
+                "T11",
+                "T14"
+            ]
+        },
+        {
+            "id": "T19",
+            "name": "Driver App - Push Notification Integration",
+            "duration": 3,
+            "resources": [
+                "Junior Developer"
+            ],
+            "cost": 255.0,
+            "dependencies": [
+                "T11",
+                "T15"
+            ]
+        },
+        {
+            "id": "T20",
+            "name": "Unit Testing",
+            "duration": 5,
+            "resources": [
+                "Senior Developer",
+                "Junior Developer"
+            ],
+            "cost": 1000.0,
+            "dependencies": [
+                "T14",
+                "T15",
+                "T16",
+                "T17",
+                "T18",
+                "T19"
+            ]
+        },
+        {
+            "id": "T21",
+            "name": "Integration Testing",
+            "duration": 7,
+            "resources": [
+                "QA Engineer"
+            ],
+            "cost": 525.0,
+            "dependencies": [
+                "T20"
+            ]
+        },
+        {
+            "id": "T22",
+            "name": "System Testing",
+            "duration": 8,
+            "resources": [
+                "QA Engineer"
+            ],
+            "cost": 600.0,
+            "dependencies": [
+                "T21"
+            ]
+        },
+        {
+            "id": "T23",
+            "name": "User Acceptance Testing (UAT)",
+            "duration": 5,
+            "resources": [
+                "Business Analyst",
+                "QA Engineer"
+            ],
+            "cost": 2375.0,
+            "dependencies": [
+                "T22"
+            ]
+        },
+        {
+            "id": "T24",
+            "name": "Backend Deployment & Infrastructure Setup",
+            "duration": 5,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 625.0,
+            "dependencies": [
+                "T6",
+                "T7",
+                "T8",
+                "T9",
+                "T10",
+                "T11"
+            ]
+        },
+        {
+            "id": "T25",
+            "name": "App Store Submission (iOS)",
+            "duration": 3,
+            "resources": [
+                "Project Manager",
+                "Senior Developer"
+            ],
+            "cost": 1530.0,
+            "dependencies": [
+                "T23",
+                "T24"
+            ]
+        },
+        {
+            "id": "T26",
+            "name": "App Store Submission (Android)",
+            "duration": 3,
+            "resources": [
+                "Project Manager",
+                "Senior Developer"
+            ],
+            "cost": 1530.0,
+            "dependencies": [
+                "T23",
+                "T24"
+            ]
+        },
+        {
+            "id": "T27",
+            "name": "Monitoring & Initial Support",
+            "duration": 5,
+            "resources": [
+                "DevOps Engineer",
+                "Senior Developer"
+            ],
+            "cost": 1200.0,
+            "dependencies": [
+                "T25",
+                "T26"
+            ]
+        }
+    ]
+}

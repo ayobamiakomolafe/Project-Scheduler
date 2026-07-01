@@ -1,0 +1,81 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Plan Data Ingestion Pipeline",
+            "duration": 3,
+            "resources": [
+                "Senior Dev",
+                "Data Engineer"
+            ],
+            "cost": 1500.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Design Data Storage in Snowflake",
+            "duration": 2,
+            "resources": [
+                "Data Architect",
+                "Data Engineer"
+            ],
+            "cost": 1000.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "Implement Real-time IoT Sensor Log Ingestion",
+            "duration": 5,
+            "resources": [
+                "Senior Dev",
+                "Data Engineer"
+            ],
+            "cost": 2500.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "Develop Anomaly Detection Model",
+            "duration": 8,
+            "resources": [
+                "Data Scientist",
+                "Senior Dev"
+            ],
+            "cost": 4000.0,
+            "dependencies": [
+                "T3"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Integrate Model with Data Pipeline",
+            "duration": 4,
+            "resources": [
+                "Senior Dev",
+                "Data Engineer"
+            ],
+            "cost": 2000.0,
+            "dependencies": [
+                "T4"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "Test and Deploy Pipeline",
+            "duration": 6,
+            "resources": [
+                "Senior Dev",
+                "Data Engineer",
+                "QA Engineer"
+            ],
+            "cost": 3000.0,
+            "dependencies": [
+                "T5"
+            ]
+        }
+    ]
+}

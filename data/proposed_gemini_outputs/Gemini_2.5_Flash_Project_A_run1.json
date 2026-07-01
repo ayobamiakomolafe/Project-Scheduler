@@ -1,0 +1,386 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Project Kick-off & Requirements Gathering",
+            "duration": 5,
+            "resources": [
+                "Project Manager",
+                "Business Analyst"
+            ],
+            "cost": 4000.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Detailed System Design & Architecture",
+            "duration": 8,
+            "resources": [
+                "Solution Architect",
+                "Senior Developer"
+            ],
+            "cost": 2080.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "Technology Stack & Tooling Selection",
+            "duration": 3,
+            "resources": [
+                "Solution Architect",
+                "Senior Developer"
+            ],
+            "cost": 780.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "Cloud Infrastructure Setup",
+            "duration": 7,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 875.0,
+            "dependencies": [
+                "T2",
+                "T3"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Database Design & Implementation",
+            "duration": 6,
+            "resources": [
+                "Senior Developer",
+                "Solution Architect"
+            ],
+            "cost": 1560.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "Security Architecture & Compliance Design",
+            "duration": 5,
+            "resources": [
+                "Security Specialist",
+                "Solution Architect"
+            ],
+            "cost": 1350.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T7",
+            "name": "Implement Security Controls (HIPAA, GDPR)",
+            "duration": 10,
+            "resources": [
+                "Senior Developer",
+                "Security Specialist"
+            ],
+            "cost": 2400.0,
+            "dependencies": [
+                "T4",
+                "T5",
+                "T6"
+            ]
+        },
+        {
+            "id": "T8",
+            "name": "Regulatory Compliance Review & Audit Prep",
+            "duration": 4,
+            "resources": [
+                "Business Analyst",
+                "Security Specialist"
+            ],
+            "cost": 2100.0,
+            "dependencies": [
+                "T6",
+                "T7"
+            ]
+        },
+        {
+            "id": "T9",
+            "name": "User Authentication & Authorization Module",
+            "duration": 8,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 920.0,
+            "dependencies": [
+                "T4",
+                "T5",
+                "T7"
+            ]
+        },
+        {
+            "id": "T10",
+            "name": "Patient Profile Management Module",
+            "duration": 7,
+            "resources": [
+                "Senior Developer",
+                "Junior Developer"
+            ],
+            "cost": 1400.0,
+            "dependencies": [
+                "T9"
+            ]
+        },
+        {
+            "id": "T11",
+            "name": "Secure PHI Data Storage & Retrieval",
+            "duration": 9,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 1035.0,
+            "dependencies": [
+                "T9",
+                "T10"
+            ]
+        },
+        {
+            "id": "T12",
+            "name": "Patient Dashboard UI/UX Development",
+            "duration": 10,
+            "resources": [
+                "Senior Developer",
+                "Junior Developer"
+            ],
+            "cost": 2000.0,
+            "dependencies": [
+                "T9",
+                "T10"
+            ]
+        },
+        {
+            "id": "T13",
+            "name": "Video Conferencing API Research & Selection",
+            "duration": 4,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 460.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T14",
+            "name": "Integrate Video Conferencing SDK/API",
+            "duration": 8,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 920.0,
+            "dependencies": [
+                "T13",
+                "T9",
+                "T12"
+            ]
+        },
+        {
+            "id": "T15",
+            "name": "Telemedicine Session Management",
+            "duration": 6,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 690.0,
+            "dependencies": [
+                "T14"
+            ]
+        },
+        {
+            "id": "T16",
+            "name": "Appointment Booking Logic",
+            "duration": 7,
+            "resources": [
+                "Senior Developer",
+                "Junior Developer"
+            ],
+            "cost": 1400.0,
+            "dependencies": [
+                "T9",
+                "T12"
+            ]
+        },
+        {
+            "id": "T17",
+            "name": "Calendar & Availability Management",
+            "duration": 6,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 690.0,
+            "dependencies": [
+                "T16"
+            ]
+        },
+        {
+            "id": "T18",
+            "name": "Automated Notification System (Email/SMS)",
+            "duration": 5,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 575.0,
+            "dependencies": [
+                "T16"
+            ]
+        },
+        {
+            "id": "T19",
+            "name": "Stripe API Integration",
+            "duration": 7,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 805.0,
+            "dependencies": [
+                "T2",
+                "T7"
+            ]
+        },
+        {
+            "id": "T20",
+            "name": "Payment Gateway Configuration",
+            "duration": 4,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 460.0,
+            "dependencies": [
+                "T19"
+            ]
+        },
+        {
+            "id": "T21",
+            "name": "Billing & Invoicing Module",
+            "duration": 6,
+            "resources": [
+                "Senior Developer"
+            ],
+            "cost": 690.0,
+            "dependencies": [
+                "T19",
+                "T20"
+            ]
+        },
+        {
+            "id": "T22",
+            "name": "Unit & Integration Testing",
+            "duration": 10,
+            "resources": [
+                "QA Engineer",
+                "Senior Developer"
+            ],
+            "cost": 1900.0,
+            "dependencies": [
+                "T11",
+                "T12",
+                "T15",
+                "T18",
+                "T21"
+            ]
+        },
+        {
+            "id": "T23",
+            "name": "Security & Penetration Testing",
+            "duration": 7,
+            "resources": [
+                "Security Specialist",
+                "QA Engineer"
+            ],
+            "cost": 1400.0,
+            "dependencies": [
+                "T7",
+                "T22"
+            ]
+        },
+        {
+            "id": "T24",
+            "name": "User Acceptance Testing (UAT)",
+            "duration": 5,
+            "resources": [
+                "Business Analyst",
+                "QA Engineer"
+            ],
+            "cost": 2375.0,
+            "dependencies": [
+                "T22",
+                "T23"
+            ]
+        },
+        {
+            "id": "T25",
+            "name": "Production Environment Deployment",
+            "duration": 4,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 500.0,
+            "dependencies": [
+                "T24"
+            ]
+        },
+        {
+            "id": "T26",
+            "name": "Go-Live & Monitoring Setup",
+            "duration": 3,
+            "resources": [
+                "DevOps Engineer",
+                "Project Manager"
+            ],
+            "cost": 1575.0,
+            "dependencies": [
+                "T25"
+            ]
+        },
+        {
+            "id": "T27",
+            "name": "User & Admin Documentation",
+            "duration": 8,
+            "resources": [
+                "Business Analyst"
+            ],
+            "cost": 3200.0,
+            "dependencies": [
+                "T12",
+                "T15",
+                "T18",
+                "T21"
+            ]
+        },
+        {
+            "id": "T28",
+            "name": "Training for Support Staff",
+            "duration": 3,
+            "resources": [
+                "Business Analyst"
+            ],
+            "cost": 1200.0,
+            "dependencies": [
+                "T27"
+            ]
+        },
+        {
+            "id": "T29",
+            "name": "Post-Launch Support & Maintenance Plan",
+            "duration": 5,
+            "resources": [
+                "Project Manager"
+            ],
+            "cost": 2000.0,
+            "dependencies": [
+                "T26"
+            ]
+        }
+    ]
+}

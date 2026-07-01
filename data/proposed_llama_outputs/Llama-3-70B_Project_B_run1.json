@@ -1,0 +1,116 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Define Project Scope",
+            "duration": 5,
+            "resources": [
+                "Project Manager"
+            ],
+            "cost": 2500.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Design Data Ingestion Pipeline",
+            "duration": 10,
+            "resources": [
+                "Senior Dev",
+                "Data Engineer"
+            ],
+            "cost": 8000.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "Implement Real-Time IoT Sensor Logs Fetching",
+            "duration": 15,
+            "resources": [
+                "Senior Dev",
+                "Data Engineer"
+            ],
+            "cost": 12000.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "Configure Snowflake Storage",
+            "duration": 8,
+            "resources": [
+                "Data Engineer"
+            ],
+            "cost": 3200.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Develop Anomaly Detection Model",
+            "duration": 20,
+            "resources": [
+                "Data Scientist"
+            ],
+            "cost": 10000.0,
+            "dependencies": [
+                "T3",
+                "T4"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "Integrate Model with Data Pipeline",
+            "duration": 12,
+            "resources": [
+                "Senior Dev",
+                "Data Scientist"
+            ],
+            "cost": 9600.0,
+            "dependencies": [
+                "T5"
+            ]
+        },
+        {
+            "id": "T7",
+            "name": "Test and Validate Pipeline",
+            "duration": 15,
+            "resources": [
+                "Senior Dev",
+                "Data Engineer",
+                "Data Scientist"
+            ],
+            "cost": 18000.0,
+            "dependencies": [
+                "T6"
+            ]
+        },
+        {
+            "id": "T8",
+            "name": "Deploy Pipeline to Production",
+            "duration": 10,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 5000.0,
+            "dependencies": [
+                "T7"
+            ]
+        },
+        {
+            "id": "T9",
+            "name": "Monitor and Maintain Pipeline",
+            "duration": 30,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 15000.0,
+            "dependencies": [
+                "T8"
+            ]
+        }
+    ]
+}

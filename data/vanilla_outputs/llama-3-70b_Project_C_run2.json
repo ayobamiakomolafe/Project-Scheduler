@@ -1,0 +1,133 @@
+{
+  "tasks":[
+      {
+         "id":"TASK-001",
+         "name":"Project Planning and Architecture",
+         "roles":[
+            "ARCH-PRIN-01",
+            "ARCH-SR-02"
+         ],
+         "duration in working days":10.0,
+         "cost in USD":3225.00,
+         "dependencies":[]
+      },
+      {
+         "id":"TASK-002",
+         "name":"Backend Infrastructure Setup",
+         "roles":[
+            "ENG-SR-BACK",
+            "DATA-LEAD-01"
+         ],
+         "duration in working days":8.0,
+         "cost in USD":2180.00,
+         "dependencies":[
+            "TASK-001"
+         ]
+      },
+      {
+         "id":"TASK-003",
+         "name":"Database Schema Design and Implementation",
+         "roles":[
+            "ARCH-SR-02",
+            "DATA-LEAD-01"
+         ],
+         "duration in working days":6.0,
+         "cost in USD":1638.00,
+         "dependencies":[
+            "TASK-002"
+         ]
+      },
+      {
+         "id":"TASK-004",
+         "name":"Real-Time GPS Tracking System Development",
+         "roles":[
+            "ENG-SR-BACK",
+            "ENG-MID-BACK"
+         ],
+         "duration in working days":12.0,
+         "cost in USD":3915.00,
+         "dependencies":[
+            "TASK-003"
+         ]
+      },
+      {
+         "id":"TASK-005",
+         "name":"Customer Interface Development",
+         "roles":[
+            "ENG-MID-FRONT",
+            "ENG-SR-MOB"
+         ],
+         "duration in working days":10.0,
+         "cost in USD":2800.00,
+         "dependencies":[
+            "TASK-004"
+         ]
+      },
+      {
+         "id":"TASK-006",
+         "name":"Driver Interface Development",
+         "roles":[
+            "ENG-MID-FRONT",
+            "ENG-SR-MOB"
+         ],
+         "duration in working days":8.0,
+         "cost in USD":2240.00,
+         "dependencies":[
+            "TASK-004"
+         ]
+      },
+      {
+         "id":"TASK-007",
+         "name":"Push Notification System Integration",
+         "roles":[
+            "ENG-SR-BACK",
+            "ENG-MID-BACK"
+         ],
+         "duration in working days":4.0,
+         "cost in USD":1240.00,
+         "dependencies":[
+            "TASK-005",
+            "TASK-006"
+         ]
+      },
+      {
+         "id":"TASK-008",
+         "name":"Security Auditing and Compliance",
+         "roles":[
+            "OPS-SR-SEC",
+            "ARCH-PRIN-01"
+         ],
+         "duration in working days":6.0,
+         "cost in USD":1875.00,
+         "dependencies":[
+            "TASK-007"
+         ]
+      },
+      {
+         "id":"TASK-009",
+         "name":"Automated Testing and QA",
+         "roles":[
+            "QA-AUTO-03",
+            "ENG-MID-BACK"
+         ],
+         "duration in working days":8.0,
+         "cost in USD":2120.00,
+         "dependencies":[
+            "TASK-008"
+         ]
+      },
+      {
+         "id":"TASK-010",
+         "name":"Deployment and Maintenance",
+         "roles":[
+            "OPS-SR-SEC",
+            "ENG-SR-BACK"
+         ],
+         "duration in working days":4.0,
+         "cost in USD":1240.00,
+         "dependencies":[
+            "TASK-009"
+         ]
+      }
+   ]
+}

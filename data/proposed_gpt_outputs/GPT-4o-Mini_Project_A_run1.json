@@ -1,0 +1,150 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Project Initiation",
+            "duration": 5,
+            "resources": [
+                "Project Manager"
+            ],
+            "cost": 875.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Requirements Gathering",
+            "duration": 10,
+            "resources": [
+                "Business Analyst",
+                "Healthcare Consultant"
+            ],
+            "cost": 2500.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "System Architecture Design",
+            "duration": 7,
+            "resources": [
+                "Senior Software Architect"
+            ],
+            "cost": 1015.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "User Interface Design",
+            "duration": 10,
+            "resources": [
+                "UI/UX Designer"
+            ],
+            "cost": 1000.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Backend Development",
+            "duration": 15,
+            "resources": [
+                "Senior Backend Engineer"
+            ],
+            "cost": 1725.0,
+            "dependencies": [
+                "T3"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "Frontend Development",
+            "duration": 15,
+            "resources": [
+                "Frontend Developer"
+            ],
+            "cost": 1200.0,
+            "dependencies": [
+                "T4"
+            ]
+        },
+        {
+            "id": "T7",
+            "name": "Telemedicine Video Integration",
+            "duration": 10,
+            "resources": [
+                "Integration Specialist"
+            ],
+            "cost": 1000.0,
+            "dependencies": [
+                "T5",
+                "T6"
+            ]
+        },
+        {
+            "id": "T8",
+            "name": "Scheduling Feature Development",
+            "duration": 8,
+            "resources": [
+                "Senior Backend Engineer"
+            ],
+            "cost": 920.0,
+            "dependencies": [
+                "T5"
+            ]
+        },
+        {
+            "id": "T9",
+            "name": "Stripe Payment Processing Integration",
+            "duration": 5,
+            "resources": [
+                "Payment Integration Specialist"
+            ],
+            "cost": 1000.0,
+            "dependencies": [
+                "T5"
+            ]
+        },
+        {
+            "id": "T10",
+            "name": "Testing and Quality Assurance",
+            "duration": 10,
+            "resources": [
+                "QA Engineer"
+            ],
+            "cost": 750.0,
+            "dependencies": [
+                "T7",
+                "T8",
+                "T9"
+            ]
+        },
+        {
+            "id": "T11",
+            "name": "Deployment",
+            "duration": 3,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 375.0,
+            "dependencies": [
+                "T10"
+            ]
+        },
+        {
+            "id": "T12",
+            "name": "Post-Deployment Support",
+            "duration": 5,
+            "resources": [
+                "Support Engineer"
+            ],
+            "cost": 500.0,
+            "dependencies": [
+                "T11"
+            ]
+        }
+    ]
+}

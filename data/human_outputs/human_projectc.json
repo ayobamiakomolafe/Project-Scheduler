@@ -1,0 +1,244 @@
+{
+  "tasks": [
+    {
+      "id": "T1",
+      "name": "Project Initiation & Requirements Gathering",
+      "cost in USD": 1995,
+      "duration in working days": 7,
+      "roles": [
+        "Principal Cloud Architect",
+        "Senior Mobile Applications Engineer"
+      ],
+      "dependencies": [],
+      "parent_id": "ROOT"
+    },
+    {
+      "id": "T2",
+      "name": "System Architecture & Application Design",
+      "cost in USD": 4480,
+      "duration in working days": 14,
+      "roles": [
+        "Principal Cloud Architect",
+        "Senior Software Architect"
+      ],
+      "dependencies": ["T1"],
+      "parent_id": "T1"
+    },
+    {
+      "id": "T3",
+      "name": "Infrastructure Provisioning & Cloud Setup",
+      "cost in USD": 2100,
+      "duration in working days": 7,
+      "roles": [
+        "Principal Cloud Architect",
+        "Senior DevOps & Security Engineer"
+      ],
+      "dependencies": ["T2"],
+      "parent_id": "T2"
+    },
+    {
+      "id": "T4",
+      "name": "Backend API Development for Food Ordering System",
+      "cost in USD": 4200,
+      "duration in working days": 21,
+      "roles": [
+        "Senior Backend Engineer",
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T3"],
+      "parent_id": "T3"
+    },
+    {
+      "id": "T5",
+      "name": "Database Schema & Migration Setup",
+      "cost in USD": 1610,
+      "duration in working days": 7,
+      "roles": [
+        "Senior Software Architect",
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T4"],
+      "parent_id": "T4"
+    },
+    {
+      "id": "T6",
+      "name": "Customer Mobile App UI/UX Development",
+      "cost in USD": 3990,
+      "duration in working days": 21,
+      "roles": [
+        "Senior Mobile Applications Engineer",
+        "Frontend Developer"
+      ],
+      "dependencies": ["T2"],
+      "parent_id": "T2"
+    },
+    {
+      "id": "T7",
+      "name": "Driver Mobile App UI/UX Development",
+      "cost in USD": 2660,
+      "duration in working days": 14,
+      "roles": [
+        "Senior Mobile Applications Engineer",
+        "Frontend Developer"
+      ],
+      "dependencies": ["T6"],
+      "parent_id": "T6"
+    },
+    {
+      "id": "T8",
+      "name": "Real-Time GPS Tracking Integration",
+      "cost in USD": 3150,
+      "duration in working days": 14,
+      "roles": [
+        "Senior Mobile Applications Engineer",
+        "Senior Backend Engineer"
+      ],
+      "dependencies": ["T7"],
+      "parent_id": "T7"
+    },
+    {
+      "id": "T9",
+      "name": "Push Notification System Implementation",
+      "cost in USD": 1365,
+      "duration in working days": 7,
+      "roles": [
+        "Senior Mobile Applications Engineer",
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T8"],
+      "parent_id": "T8"
+    },
+    {
+      "id": "T10",
+      "name": "User Authentication & Identity Management",
+      "cost in USD": 1680,
+      "duration in working days": 7,
+      "roles": [
+        "Senior Backend Engineer",
+        "Senior DevOps & Security Engineer"
+      ],
+      "dependencies": ["T4"],
+      "parent_id": "T4"
+    },
+    {
+      "id": "T11",
+      "name": "Payment & Checkout Workflow Integration",
+      "cost in USD": 2730,
+      "duration in working days": 14,
+      "roles": [
+        "Senior Backend Engineer",
+        "Frontend Developer"
+      ],
+      "dependencies": ["T10"],
+      "parent_id": "T10"
+    },
+    {
+      "id": "T12",
+      "name": "Order Management & Delivery Workflow Logic",
+      "cost in USD": 2800,
+      "duration in working days": 14,
+      "roles": [
+        "Senior Backend Engineer",
+        "Mid-Level Backend Engineer"
+      ],
+      "dependencies": ["T4"],
+      "parent_id": "T4"
+    },
+    {
+      "id": "T13",
+      "name": "Real-Time Status Synchronization",
+      "cost in USD": 1575,
+      "duration in working days": 7,
+      "roles": [
+        "Senior Mobile Applications Engineer",
+        "Senior Backend Engineer"
+      ],
+      "dependencies": ["T12"],
+      "parent_id": "T12"
+    },
+    {
+      "id": "T14",
+      "name": "Security Hardening & Compliance Auditing",
+      "cost in USD": 2100,
+      "duration in working days": 7,
+      "roles": [
+        "Senior DevOps & Security Engineer",
+        "Principal Cloud Architect"
+      ],
+      "dependencies": ["T10"],
+      "parent_id": "T10"
+    },
+    {
+      "id": "T15",
+      "name": "CI/CD Pipeline & Containerization Setup",
+      "cost in USD": 875,
+      "duration in working days": 7,
+      "roles": [
+        "Senior DevOps & Security Engineer"
+      ],
+      "dependencies": ["T14"],
+      "parent_id": "T14"
+    },
+    {
+      "id": "T16",
+      "name": "Automated Testing & Mobile QA Validation",
+      "cost in USD": 2590,
+      "duration in working days": 14,
+      "roles": [
+        "Automated QA Engineer",
+        "Senior Mobile Applications Engineer"
+      ],
+      "dependencies": ["T15"],
+      "parent_id": "T15"
+    },
+    {
+      "id": "T17",
+      "name": "End-to-End Functional Testing",
+      "cost in USD": 1330,
+      "duration in working days": 7,
+      "roles": [
+        "Automated QA Engineer",
+        "Senior Backend Engineer"
+      ],
+      "dependencies": ["T16"],
+      "parent_id": "T16"
+    },
+    {
+      "id": "T18",
+      "name": "User Acceptance Testing (UAT)",
+      "cost in USD": 1085,
+      "duration in working days": 7,
+      "roles": [
+        "Frontend Developer",
+        "Automated QA Engineer"
+      ],
+      "dependencies": ["T17"],
+      "parent_id": "T17"
+    },
+    {
+      "id": "T19",
+      "name": "Production Deployment & Monitoring Setup",
+      "cost in USD": 2100,
+      "duration in working days": 7,
+      "roles": [
+        "Senior DevOps & Security Engineer",
+        "Principal Cloud Architect"
+      ],
+      "dependencies": ["T18"],
+      "parent_id": "T18"
+    },
+    {
+      "id": "T20",
+      "name": "Post-Deployment Monitoring & Optimization",
+      "cost in USD": 3500,
+      "duration in working days": 14,
+      "roles": [
+        "Senior Mobile Applications Engineer",
+        "Senior Backend Engineer",
+        "Automated QA Engineer"
+      ],
+      "dependencies": ["T19"],
+      "parent_id": "T19"
+    }
+  ]
+}

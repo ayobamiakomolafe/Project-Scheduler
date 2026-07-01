@@ -1,0 +1,125 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Define Project Scope",
+            "duration": 5,
+            "resources": [
+                "Project Manager"
+            ],
+            "cost": 2000.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Design Dual Interfaces",
+            "duration": 10,
+            "resources": [
+                "Senior UI/UX Designer"
+            ],
+            "cost": 6000.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "Develop Real-time GPS Tracking",
+            "duration": 15,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 12000.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "Implement Push Notifications",
+            "duration": 8,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 6400.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Develop Customer Interface",
+            "duration": 12,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 9600.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "Develop Driver Interface",
+            "duration": 12,
+            "resources": [
+                "Senior Dev"
+            ],
+            "cost": 9600.0,
+            "dependencies": [
+                "T2"
+            ]
+        },
+        {
+            "id": "T7",
+            "name": "Conduct Unit Testing",
+            "duration": 10,
+            "resources": [
+                "Junior Dev"
+            ],
+            "cost": 4000.0,
+            "dependencies": [
+                "T3",
+                "T4",
+                "T5",
+                "T6"
+            ]
+        },
+        {
+            "id": "T8",
+            "name": "Conduct Integration Testing",
+            "duration": 8,
+            "resources": [
+                "Junior Dev"
+            ],
+            "cost": 3200.0,
+            "dependencies": [
+                "T7"
+            ]
+        },
+        {
+            "id": "T9",
+            "name": "Deploy Application",
+            "duration": 5,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 4000.0,
+            "dependencies": [
+                "T8"
+            ]
+        },
+        {
+            "id": "T10",
+            "name": "Monitor and Maintain Application",
+            "duration": 10,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 8000.0,
+            "dependencies": [
+                "T9"
+            ]
+        }
+    ]
+}

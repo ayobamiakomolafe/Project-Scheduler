@@ -1,0 +1,114 @@
+{
+    "tasks": [
+        {
+            "id": "T1",
+            "name": "Define project requirements",
+            "duration": 5,
+            "resources": [
+                "Project Manager",
+                "Business Analyst"
+            ],
+            "cost": 2000.0,
+            "dependencies": []
+        },
+        {
+            "id": "T2",
+            "name": "Design data ingestion architecture",
+            "duration": 7,
+            "resources": [
+                "Data Architect"
+            ],
+            "cost": 910.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T3",
+            "name": "Set up IoT sensor data sources",
+            "duration": 10,
+            "resources": [
+                "IoT Engineer"
+            ],
+            "cost": 4000.0,
+            "dependencies": [
+                "T1"
+            ]
+        },
+        {
+            "id": "T4",
+            "name": "Develop data ingestion pipeline",
+            "duration": 15,
+            "resources": [
+                "Data Engineer"
+            ],
+            "cost": 1950.0,
+            "dependencies": [
+                "T2",
+                "T3"
+            ]
+        },
+        {
+            "id": "T5",
+            "name": "Integrate Snowflake for data storage",
+            "duration": 5,
+            "resources": [
+                "Data Engineer"
+            ],
+            "cost": 650.0,
+            "dependencies": [
+                "T4"
+            ]
+        },
+        {
+            "id": "T6",
+            "name": "Train anomaly detection model",
+            "duration": 10,
+            "resources": [
+                "Data Scientist"
+            ],
+            "cost": 1300.0,
+            "dependencies": [
+                "T5"
+            ]
+        },
+        {
+            "id": "T7",
+            "name": "Test and validate the pipeline",
+            "duration": 5,
+            "resources": [
+                "QA Engineer"
+            ],
+            "cost": 375.0,
+            "dependencies": [
+                "T4",
+                "T6"
+            ]
+        },
+        {
+            "id": "T8",
+            "name": "Deploy the data ingestion pipeline",
+            "duration": 3,
+            "resources": [
+                "DevOps Engineer"
+            ],
+            "cost": 375.0,
+            "dependencies": [
+                "T7"
+            ]
+        },
+        {
+            "id": "T9",
+            "name": "Monitor and optimize the pipeline",
+            "duration": 5,
+            "resources": [
+                "Data Engineer",
+                "Data Scientist"
+            ],
+            "cost": 1300.0,
+            "dependencies": [
+                "T8"
+            ]
+        }
+    ]
+}

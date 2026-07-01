@@ -1,0 +1,212 @@
+{
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "name": "Project Kick-off & Requirements Gathering",
+      "roles": ["ARCH-PRIN-01", "ARCH-SR-02", "ENG-SR-BACK", "ENG-MID-FRONT", "ENG-SR-MOB", "OPS-SR-SEC", "QA-AUTO-03"],
+      "duration in working days": 3.0,
+      "cost in USD": 2475.00,
+      "dependencies": []
+    },
+    {
+      "id": "TASK-002",
+      "name": "Detailed Scope Definition & WBS Creation",
+      "roles": ["ARCH-PRIN-01", "ARCH-SR-02", "ENG-SR-BACK"],
+      "duration in working days": 2.0,
+      "cost in USD": 870.00,
+      "dependencies": ["TASK-001"]
+    },
+    {
+      "id": "TASK-003",
+      "name": "Overall System Architecture Design",
+      "roles": ["ARCH-PRIN-01", "ARCH-SR-02"],
+      "duration in working days": 7.0,
+      "cost in USD": 2240.00,
+      "dependencies": ["TASK-002"]
+    },
+    {
+      "id": "TASK-004",
+      "name": "Database Schema Design & Optimization",
+      "roles": ["ARCH-SR-02", "ENG-SR-BACK"],
+      "duration in working days": 5.0,
+      "cost in USD": 1300.00,
+      "dependencies": ["TASK-003"]
+    },
+    {
+      "id": "TASK-005",
+      "name": "Security Architecture Design",
+      "roles": ["ARCH-PRIN-01", "OPS-SR-SEC"],
+      "duration in working days": 6.0,
+      "cost in USD": 1800.00,
+      "dependencies": ["TASK-003"]
+    },
+    {
+      "id": "TASK-006",
+      "name": "API Design & Documentation",
+      "roles": ["ARCH-SR-02", "ENG-SR-BACK"],
+      "duration in working days": 4.0,
+      "cost in USD": 1040.00,
+      "dependencies": ["TASK-004"]
+    },
+    {
+      "id": "TASK-007",
+      "name": "Core Patient Management API Development",
+      "roles": ["ENG-SR-BACK", "ENG-MID-BACK"],
+      "duration in working days": 8.0,
+      "cost in USD": 1600.00,
+      "dependencies": ["TASK-004", "TASK-006"]
+    },
+    {
+      "id": "TASK-008",
+      "name": "Scheduling Module Backend Development",
+      "roles": ["ENG-SR-BACK", "ENG-MID-BACK"],
+      "duration in working days": 7.0,
+      "cost in USD": 1400.00,
+      "dependencies": ["TASK-006", "TASK-007"]
+    },
+    {
+      "id": "TASK-009",
+      "name": "User Authentication & Authorization Backend",
+      "roles": ["ENG-SR-BACK", "OPS-SR-SEC"],
+      "duration in working days": 6.0,
+      "cost in USD": 1440.00,
+      "dependencies": ["TASK-005", "TASK-006"]
+    },
+    {
+      "id": "TASK-010",
+      "name": "Patient Portal UI/UX Design & Prototyping",
+      "roles": ["ENG-MID-FRONT"],
+      "duration in working days": 5.0,
+      "cost in USD": 400.00,
+      "dependencies": ["TASK-002"]
+    },
+    {
+      "id": "TASK-011",
+      "name": "Core Patient Portal UI Development",
+      "roles": ["ENG-MID-FRONT"],
+      "duration in working days": 10.0,
+      "cost in USD": 800.00,
+      "dependencies": ["TASK-010", "TASK-007", "TASK-009"]
+    },
+    {
+      "id": "TASK-012",
+      "name": "Scheduling Interface Development",
+      "roles": ["ENG-MID-FRONT"],
+      "duration in working days": 7.0,
+      "cost in USD": 560.00,
+      "dependencies": ["TASK-010", "TASK-008"]
+    },
+    {
+      "id": "TASK-013",
+      "name": "Video Streaming Integration Backend",
+      "roles": ["ENG-SR-BACK"],
+      "duration in working days": 8.0,
+      "cost in USD": 920.00,
+      "dependencies": ["TASK-006", "TASK-007"]
+    },
+    {
+      "id": "TASK-014",
+      "name": "Video Streaming Integration Frontend (Web & Mobile)",
+      "roles": ["ENG-SR-MOB", "ENG-MID-FRONT"],
+      "duration in working days": 10.0,
+      "cost in USD": 1900.00,
+      "dependencies": ["TASK-011", "TASK-013"]
+    },
+    {
+      "id": "TASK-015",
+      "name": "Stripe Payment Backend Integration",
+      "roles": ["ENG-SR-BACK"],
+      "duration in working days": 7.0,
+      "cost in USD": 805.00,
+      "dependencies": ["TASK-006", "TASK-007"]
+    },
+    {
+      "id": "TASK-016",
+      "name": "Payment Gateway UI Development & Validation",
+      "roles": ["ENG-MID-FRONT"],
+      "duration in working days": 5.0,
+      "cost in USD": 400.00,
+      "dependencies": ["TASK-011", "TASK-015"]
+    },
+    {
+      "id": "TASK-017",
+      "name": "Implement Compliance Frameworks",
+      "roles": ["ARCH-PRIN-01", "OPS-SR-SEC", "ENG-SR-BACK"],
+      "duration in working days": 8.0,
+      "cost in USD": 3320.00,
+      "dependencies": ["TASK-005", "TASK-007", "TASK-009"]
+    },
+    {
+      "id": "TASK-018",
+      "name": "Security Auditing & Penetration Testing Prep",
+      "roles": ["OPS-SR-SEC"],
+      "duration in working days": 5.0,
+      "cost in USD": 625.00,
+      "dependencies": ["TASK-017"]
+    },
+    {
+      "id": "TASK-019",
+      "name": "Unit & Integration Testing (Backend)",
+      "roles": ["ENG-SR-BACK", "ENG-MID-BACK", "QA-AUTO-03"],
+      "duration in working days": 7.0,
+      "cost in USD": 1925.00,
+      "dependencies": ["TASK-007", "TASK-008", "TASK-009", "TASK-013", "TASK-015"]
+    },
+    {
+      "id": "TASK-020",
+      "name": "Frontend & Mobile UI Testing",
+      "roles": ["ENG-MID-FRONT", "ENG-SR-MOB", "QA-AUTO-03"],
+      "duration in working days": 6.0,
+      "cost in USD": 1590.00,
+      "dependencies": ["TASK-011", "TASK-012", "TASK-014", "TASK-016"]
+    },
+    {
+      "id": "TASK-021",
+      "name": "End-to-End System Testing & User Acceptance Testing (UAT)",
+      "roles": ["QA-AUTO-03", "ENG-SR-BACK", "ENG-MID-FRONT", "ENG-SR-MOB"],
+      "duration in working days": 8.0,
+      "cost in USD": 3040.00,
+      "dependencies": ["TASK-019", "TASK-020"]
+    },
+    {
+      "id": "TASK-022",
+      "name": "Security Testing & Vulnerability Assessment",
+      "roles": ["OPS-SR-SEC", "QA-AUTO-03"],
+      "duration in working days": 5.0,
+      "cost in USD": 1000.00,
+      "dependencies": ["TASK-018", "TASK-021"]
+    },
+    {
+      "id": "TASK-023",
+      "name": "Infrastructure Provisioning & CI/CD Setup",
+      "roles": ["ARCH-PRIN-01", "OPS-SR-SEC"],
+      "duration in working days": 6.0,
+      "cost in USD": 1800.00,
+      "dependencies": ["TASK-003", "TASK-005"]
+    },
+    {
+      "id": "TASK-024",
+      "name": "Production Deployment",
+      "roles": ["OPS-SR-SEC"],
+      "duration in working days": 3.0,
+      "cost in USD": 375.00,
+      "dependencies": ["TASK-021", "TASK-022", "TASK-023"]
+    },
+    {
+      "id": "TASK-025",
+      "name": "Monitoring & Alerting Setup",
+      "roles": ["OPS-SR-SEC"],
+      "duration in working days": 3.0,
+      "cost in USD": 375.00,
+      "dependencies": ["TASK-023"]
+    },
+    {
+      "id": "TASK-026",
+      "name": "Initial Post-Launch Support",
+      "roles": ["ENG-SR-BACK", "ENG-MID-FRONT", "OPS-SR-SEC"],
+      "duration in working days": 5.0,
+      "cost in USD": 1600.00,
+      "dependencies": ["TASK-024", "TASK-025"]
+    }
+  ]
+}
