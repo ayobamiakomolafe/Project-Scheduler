@@ -12,3 +12,4 @@ pillow>=10.0.0
 langchain-huggingface[full]
 torch 
 torchvision
+langchain_chroma
