@@ -87,7 +87,7 @@ def build_crew(project_description, llm, rag_tool=None):
     crew = Crew(
         agents=[planner, estimator, dependency_manager],
         tasks=[t1, t2, t3],
-        verbose=False
+        verbose=True
     )
 
     return crew.kickoff()
