@@ -105,7 +105,7 @@ def get_llm(provider_label: str, user_api_key: str):
 
     if not api_key:
         if cfg["has_default"]:
-            api_key = os.getenv(cfg["default_env"])
+            api_key = st.secrets[cfg["default_env"]]
             if not api_key:
                 return None, (
                     "The default Groq key isn't configured on this server, and you "
