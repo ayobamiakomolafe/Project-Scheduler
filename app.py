@@ -5,6 +5,10 @@ import os
 import hashlib
 import tempfile
 from crewai import LLM
+
+import crewai.llms.cache as _crewai_cache
+_crewai_cache.mark_cache_breakpoint = lambda msg: msg
+
 from agents.crew import build_crew
 from utils.parser import safe_parse_json
 from core.validator import validate_project
@@ -13,6 +17,8 @@ from tools.gantt_generator import generate_gantt
 from tools.doc_generator import generate_doc
 from tools.embedding import build_vector_db_from_file
 from tools.rag_query_tool import make_rag_tool
+
+
 
 # ------------------------------------------------------------------
 # Page configuration
